@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const ShowUser = ({ singleuser }) => {
+  const navigate = useNavigate();
   const { id, firstname, lastname, email, birthDate } = singleuser;
+  const goToDetails = () => {
+    navigate(`${id}`);
+  };
   return (
     <div className="border-2 border-yellow-300 rounded-xl p-3 flex flex-col gap-3 text-center">
       <h1 className="text-2xl font-bold ">
@@ -14,6 +18,7 @@ const ShowUser = ({ singleuser }) => {
           <button>More Details</button>{" "}
         </Link>
       </div>
+      <button onClick={goToDetails}>Go for Details</button>
     </div>
   );
 };
