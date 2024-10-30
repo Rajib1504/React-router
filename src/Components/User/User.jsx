@@ -3,7 +3,7 @@ import ShowUser from "../ShowUser/ShowUser";
 
 const User = () => {
   const users = useLoaderData();
-  console.log(users);
+  // console.log(users);
   return (
     <div className="text-center">
       <h2>Great User:{users.length}</h2>
